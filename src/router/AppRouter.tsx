@@ -11,13 +11,13 @@ const AppRouter = () => {
       {isAuth ? (
         <Route>
           {privateRoutes.map((route) => (
-            <Route path={route.path} element={<route.element/>} />
+            <Route path={route.path} element={<route.element/>} key={route.path} />
           ))}
         </Route>
       ) : (
         <Route>
           {publicRoutes.map((route) => (
-            <Route path={route.path} element={<route.element/>} />
+            <Route path={route.path} element={<route.element/>} key={route.path} />
           ))}
         </Route>
       )}
